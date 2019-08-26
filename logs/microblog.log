@@ -1,0 +1,71 @@
+2019-08-26 11:57:03,082 ERROR: Exception on /reset_password_request [POST] [in /home/fabio/anaconda3/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask_mail.py", line 427, in send
+    connection.send(self)
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask_mail.py", line 192, in send
+    message.rcpt_options)
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 852, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 600, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 440, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 367, in putcmd
+    self.send(str)
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 359, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/fabio/Desktop/Progetti_ML/Programma/website/app/routes.py", line 157, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/fabio/Desktop/Progetti_ML/Programma/website/app/email.py", line 19, in send_password_reset_email
+    user=user, token=token))
+  File "/home/fabio/Desktop/Progetti_ML/Programma/website/app/email.py", line 9, in send_email
+    mail.send(msg)
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/fabio/anaconda3/lib/python3.7/site-packages/flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 984, in quit
+    res = self.docmd("quit")
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 420, in docmd
+    self.putcmd(cmd, args)
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 367, in putcmd
+    self.send(str)
+  File "/home/fabio/anaconda3/lib/python3.7/smtplib.py", line 359, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2019-08-26 12:27:27,064 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:31:43,028 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:33:47,941 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:41:18,133 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:43:01,549 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:44:16,033 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:45:11,847 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:46:54,431 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:48:07,099 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:52:12,602 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:53:56,147 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:56:10,856 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 12:59:07,644 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 13:00:07,420 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:49]
+2019-08-26 15:05:33,385 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:55]
+2019-08-26 17:17:19,421 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:66]
+2019-08-26 17:17:19,421 INFO: Microblog startup [in /home/fabio/Desktop/Progetti_ML/Programma/website/app/__init__.py:66]
